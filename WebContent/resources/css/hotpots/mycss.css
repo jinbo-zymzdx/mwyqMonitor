@@ -1,0 +1,42 @@
+.a1{
+	margin-top:5px;
+    text-decoration: none;
+    font-size: 25px;
+    text-align: center;
+    color: #000000;
+    display:block;
+    
+    
+    cursor: pointer;
+}
+
+.a2{
+    color: #2a6496;
+    margin-top=5px
+}
+
+.a3{
+	text-size=5px;
+	color:#BEBEBE;
+}
+
+.a4{
+	height:300px;
+	padding:0;
+/*
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+*/
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 12;（行数）
+
+    
+
+}
+
+

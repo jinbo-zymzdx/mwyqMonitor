@@ -1,0 +1,322 @@
+@charset "utf-8";
+
+/* 打印样式 */
+@media print{
+    .row, .row-not-margin{
+        width:auto !important;
+    }
+    .col-xs-8, .col-xs-4{
+        width:auto !important;
+    }
+    #map-demo{
+        height:400pt !important;
+    }
+    #map-demo img{
+        /* 解决百度地图与bootstrap冲突而导致的地图打印不出 */
+        max-width:none !important;
+    }
+    .BMap_pop div:nth-child(-n+6){
+        /* 解决打印时标注点信息框无背景导致堆叠在一起的问题 */
+        background-color:#FFF !important;
+    }
+    #hotevent{
+        width:auto !important;
+        height:auto !important;
+    }
+    .col4-draw-left{
+        width:33.3% !important;
+        padding-left:0 !important;
+        padding-right:10px !important;
+    }
+    .col4-draw-center{
+        width:33.3% !important;
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
+    .col4-draw-right{
+        width:33.3% !important;
+        padding-left:10px !important;
+        padding-right:0 !important;
+    }
+    .chart {
+        height: auto;
+        text-align: center;
+        margin-right: 2px;
+    }
+    .hot-event-left{
+        content:url('../img/hot_event_left.gif');
+    }
+    .hot-event-right{
+        content:url('../img/hot_event_right.gif');
+    }
+    .hot-event-left, .hot-event-right{
+        width:50px;
+        height:50px;
+        border-radius:50% !important;
+        color:#FFF !important;
+        padding:10px;
+    }
+    .panel-map-print,
+    .panel-area-print{
+        page-break-inside: avoid;  /* 避免在元素内部插入分页符。*/
+    }
+}
+
+/* 主体部分样式 */
+.row-ptop-20{
+    padding-top:20px;
+}
+.bs-callout {
+    padding: 10px 30px;
+    border-left: 3px solid #EEE;
+}
+.bs-callout-info {
+    background-color: rgba(0, 136, 204, 0.12);
+}
+.result-count {
+    text-align: center;
+    font-size: 14px;
+}
+.chart {
+    height: 180px;
+    text-align: center;
+    margin-right: 2px;
+    /*border: 1px solid #cdcdcd;*/
+    /*margin-bottom: 0.5em;*/
+}
+.timetrend {
+    margin-top: 15px;
+    text-align: center;
+    width: 100%;
+    height: 240px;
+    float: left;
+    border: 1px solid #cdcdcd;
+}
+.new-des{
+    /*border: 1px solid #cdcdcd;*/
+    border-bottom:none;
+    margin-bottom:10px;
+}
+#hotevent{
+    height:1043px;
+    overflow:auto;
+}
+.hot-event-left, .hot-event-right{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    color:#FFF;
+    padding:10px;
+}
+.event-newsNum{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.hot-event-left{
+    background-image:url('../img/hot_event_left.gif');
+}
+.hot-event-right{
+    background-image:url('../img/hot_event_right.gif');
+}
+#map-demo{
+    height:500px;
+}
+.col4-draw-left{
+    padding-left:0 !important;
+    padding-right:10px !important;
+}
+.col4-draw-center{
+    padding-left:5px !important;
+    padding-right:5px !important;
+}
+.col4-draw-right{
+    padding-left:10px !important;
+    padding-right:0 !important;
+}
+.header{
+    line-height:22px;
+}
+
+#news_trends_chart svg{
+    height:220px;
+}
+
+#search-result{
+    margin-bottom:0 !important;
+    padding:8px 10px 8px 15px !important;
+    line-height:20px;
+    display:none;
+}
+.search-more{
+    color:rgb(37, 119, 181);
+    margin-left:15px;
+}
+.highlight{
+    color:red;
+    font-weight:bold;
+    margin:0 2px;
+}
+
+/* 模态框 */
+.modal-dialog-width{
+    width:800px !important;
+}
+.modal-area-list{
+    border-bottom: 1px dotted #B3A9A9;
+    line-height:24px;
+    width:100%;
+    float:left;
+}
+.modal-area-list a{
+    width: 670px;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.modal-newslist-list{
+    border-bottom: 1px dotted #B3A9A9;
+    line-height:24px;
+    width:100%;
+    float:left;
+}
+
+.modal-newslist-list a{
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.modal-body-point{
+    padding:10px 20px 15px !important;
+    height:400px !important;
+}
+.modal-footer-point{
+    margin-top:0 !important;
+    padding:10px 15px !important;
+}
+
+/* 分页 */
+#pagination {
+    height: 33px;
+    text-align: center;
+    padding: 3px;
+    padding-left: 2px !important;
+    width: auto;
+    float: left;
+}
+#pagination a:hover{
+    text-decoration:none !important;
+}
+
+/* 半透明背景层 */
+#bg{
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background-color:black;
+    -moz-opacity: 0.75;
+    opacity:.75;
+    filter: alpha(opacity=75);
+    z-index:2002;
+    display:none;
+}
+#wait_login{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+.fix-width{
+    width:310px;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    float:left;
+}
+.pull-right{
+    margin-right:5px;
+}
+.show-line-3{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    float: left;
+}
+.modal-title{
+    text-align: center;
+    padding: 0 25px;
+}
+.modal-header{
+    padding:10px 15px !important;
+}
+
+/**搜索结果的"关闭"链接*/
+.sra_close{
+    margin-left: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 新闻内容模态框 */
+.modal-news-content{
+    font-size:14px;
+    line-height:24px;
+}
+
+/*
+#usersubmenu{
+	padding:0 !important;
+}
+*/
+
+/***********************************
+ 2017-12-05 SUN PENG
+***********************************/
+#panel-body_news_list {
+    width: 100%;
+    height: 200px;
+}
+
+#news_trends_echart {
+    margin-top: 0px;
+    width: 100%;
+    height: 200px;
+}
+
+#panel_loc_stat {
+    /*margin-left: 10px;*/
+    width: 100%;
+    height: 200px;
+}
+
+#panel_per_stat {
+    /*margin-left: 10px;*/
+    width: 100%;
+    height: 200px;
+}
+
+#panel_org_stat {
+    /*margin-left: 10px;*/
+    width: 100%;
+    height: 200px;
+}
+
+#topic_map {
+	width: 100%;
+    height: 300px;
+}

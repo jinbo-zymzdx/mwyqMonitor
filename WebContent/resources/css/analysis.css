@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+/* 打印样式 */
+@media print{
+	.row, .row-not-margin{
+		width:auto !important;
+	}
+	.col-sm-6{
+		width:auto !important;
+		/*height: 500px;*/
+	}
+	.panel{
+		page-break-inside: avoid;
+	}
+	#event_top_chart{
+		margin-bottom:10px;
+	}
+}
+
+
+.row-ptop-25{
+	padding-top:25px;
+}
+#news_count_chart,#event_count_chart{
+	height:310px;
+}
+
+#news_count_chart_x {
+	/*margin: 0;*/
+	width: 100%;
+	height: 310px;
+}
+
+#event_count_chart_x {
+	/*margin: 0;*/
+	width: 100%;
+	height: 310px;
+}
+#entity_count_chart_x {
+	width: 100%;
+	height: 310px;
+}
+#topic_count_chart_x {
+	width: 100%;
+	height: 310px;
+}
+#visitors_level_chart_x{
+	width: 100%;
+	height: 310px;
+}
+#keyword_top_chart_x {
+	width: 100%;
+	height: 310px;
+}
+
+#entity_count_chart,#topic_count_chart{
+	position:relative;
+	height:350px;
+	z-index:0;
+}
+#event_top_chart{
+	height:310px;
+}
+#keyword_top_chart{
+	height:360px;
+}
+#visitors_level_chart{
+	width:100% !important;
+	height:350px;
+}
+.explantion{
+	position:relative;
+	width:60px;
+	text-align:center;
+	margin:auto;
+	z-index:1;
+	top:-192px;
+}
+.panel-footer{
+	text-align:center;
+	padding:3px 5px !important;
+	height: 40px;
+}
+.pagination{
+	margin:0 !important;
+}
+.pagination li{
+	cursor:pointer;
+}
+.panel-map,.panel-keywords{
+	padding:10px !important;
+}
+
+#pagination{
+	height:33px;
+	text-align:center;
+	padding: 3px;
+	padding-left:2px !important;
+	width:auto;
+	float:left;
+}
+#pagination a:hover{
+	text-decoration:none !important;
+}
+#pageMess{
+	width: 80px;
+	height: 33px;
+	float: right;
+	line-height: 28px;
+	text-align: right;
+	padding: 2px 10px;
+}
+
+/* 用户访问热度地图 */
+.stateTip{ 
+	z-index:2;
+	display:none; 
+	position:absolute; 
+	padding:8px; 
+	background:#fff; 
+	border:2px solid #2385B1; 
+	border-radius: 4px; 
+	font-size:12px; 
+	font-family:Tahoma; 
+	color:#333;
+}
+/* 用户访问热度地图 */
+
+ /* 历史话题排行 */
+.chat li {
+	margin-bottom: 9px !important;
+}
+
+#event_top_chart li.clearfix a{
+	width: 85%;
+	/* min-width: 300px; */
+	float: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}

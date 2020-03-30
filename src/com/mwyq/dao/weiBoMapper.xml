@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mwyq.dao.weiBoMapper" >
+  <resultMap id="BaseResultMap" type="com.mwyq.model.weiBo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="author" property="author" jdbcType="VARCHAR" />
+    <result column="emotion" property="emotion" jdbcType="VARCHAR" />
+    <result column="time" property="time" jdbcType="TIMESTAMP" />
+    <result column="yuliu" property="yuliu" jdbcType="INTEGER" />
+    <result column="lang" property="lang" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <resultMap id="weiboAuthorMap" type="com.mwyq.model.weiboGroup">
+	  <result column="num" property="num" jdbcType="INTEGER" javaType="int"/>
+	  <result column="author" property="author" jdbcType="VARCHAR" javaType="string"/>
+  </resultMap>
+  
+  <resultMap id="weiboEmotion" type="com.mwyq.model.weiboEmotion">
+    <result column="emotion" property="emotion" jdbcType="VARCHAR" javaType="string"/>
+    <result column="num" property="num" jdbcType="INTEGER" javaType="int"/>
+  </resultMap>
+  
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, content, author, emotion, time, yuliu, lang
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.mwyq.model.weiBoExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from weibo
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from weibo
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from weibo
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.mwyq.model.weiBoExample" >
+    delete from weibo
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.mwyq.model.weiBo" >
+    insert into weibo (id, content, author, 
+      emotion, time, yuliu, 
+      lang)
+    values (#{id,jdbcType=INTEGER}, #{content,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, 
+      #{emotion,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP}, #{yuliu,jdbcType=INTEGER}, 
+      #{lang,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.mwyq.model.weiBo" >
+    insert into weibo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+      <if test="author != null" >
+        author,
+      </if>
+      <if test="emotion != null" >
+        emotion,
+      </if>
+      <if test="time != null" >
+        time,
+      </if>
+      <if test="yuliu != null" >
+        yuliu,
+      </if>
+      <if test="lang != null" >
+        lang,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null" >
+        #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="emotion != null" >
+        #{emotion,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null" >
+        #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="yuliu != null" >
+        #{yuliu,jdbcType=INTEGER},
+      </if>
+      <if test="lang != null" >
+        #{lang,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.mwyq.model.weiBoExample" resultType="java.lang.Integer" >
+    select count(*) from weibo
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update weibo
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.content != null" >
+        content = #{record.content,jdbcType=VARCHAR},
+      </if>
+      <if test="record.author != null" >
+        author = #{record.author,jdbcType=VARCHAR},
+      </if>
+      <if test="record.emotion != null" >
+        emotion = #{record.emotion,jdbcType=VARCHAR},
+      </if>
+      <if test="record.time != null" >
+        time = #{record.time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.yuliu != null" >
+        yuliu = #{record.yuliu,jdbcType=INTEGER},
+      </if>
+      <if test="record.lang != null" >
+        lang = #{record.lang,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update weibo
+    set id = #{record.id,jdbcType=INTEGER},
+      content = #{record.content,jdbcType=VARCHAR},
+      author = #{record.author,jdbcType=VARCHAR},
+      emotion = #{record.emotion,jdbcType=VARCHAR},
+      time = #{record.time,jdbcType=TIMESTAMP},
+      yuliu = #{record.yuliu,jdbcType=INTEGER},
+      lang = #{record.lang,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mwyq.model.weiBo" >
+    update weibo
+    <set >
+      <if test="content != null" >
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null" >
+        author = #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="emotion != null" >
+        emotion = #{emotion,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null" >
+        time = #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="yuliu != null" >
+        yuliu = #{yuliu,jdbcType=INTEGER},
+      </if>
+      <if test="lang != null" >
+        lang = #{lang,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mwyq.model.weiBo" >
+    update weibo
+    set content = #{content,jdbcType=VARCHAR},
+      author = #{author,jdbcType=VARCHAR},
+      emotion = #{emotion,jdbcType=VARCHAR},
+      time = #{time,jdbcType=TIMESTAMP},
+      yuliu = #{yuliu,jdbcType=INTEGER},
+      lang = #{lang,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <select id="getWeiBoNews" resultMap="BaseResultMap">
+  	SELECT * from weibo where lang=#{lang} order by time DESC LIMIT 30
+  </select>
+  
+  <select id="getAuthorGroup" resultMap="weiboAuthorMap">
+  	SELECT author,count(1) as num from weibo WHERE lang=#{lang} GROUP BY author ORDER BY count(1) desc limit 8
+  </select>
+  
+  <select id="getWeiboEmotion" resultMap="weiboEmotion">
+  SELECT emotion,count(1) as num from weibo WHERE lang=#{lang} GROUP BY emotion
+  </select>
+  
+  <select id="getWeiBoByEmotion" resultMap="BaseResultMap">
+  	SELECT * from weibo where lang=#{lang} and emotion=#{emotion} order by time DESC LIMIT 30
+  </select>
+  
+  <select id="getAuthorWeibo" resultMap="BaseResultMap">
+     SELECT * FROM weibo WHERE author=#{name} ORDER BY time DESC LIMIT 30
+  </select>
+  
+</mapper>

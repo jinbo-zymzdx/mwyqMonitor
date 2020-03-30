@@ -1,0 +1,40 @@
+#container{
+	position:absolute;
+	width:1024px;
+	left:50%;
+	margin-left:-400px;
+}
+#search #titleLogo{
+	height:30px;
+	position:relative;
+	top:8px;
+}
+#keyword{
+	border:1px solid #aaa;
+	width:400px;
+	height:25px;
+}
+#sub{
+	height:25px;
+	border:1px solid #aaa;
+}
+.msg{
+	border-bottom:1px solid #ccc;
+	height:30px;
+}
+.msg span{
+	position:relative;
+	top:-2px;
+}
+.msg a:link,.msg a:visited{
+	color:#555;
+	text-decoration:none;
+}
+.page:link,.page:visited{
+	color:#00B0DF;
+	text-decoration:none;
+}
+.msg a:hover,.page:hover{
+	color:#C02C00;
+	text-decoration:none;
+}

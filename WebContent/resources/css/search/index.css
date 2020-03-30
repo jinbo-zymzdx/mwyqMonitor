@@ -1,0 +1,25 @@
+body{
+	/** background:url(../image/cover2.jpg); **/
+}
+#logo{
+	height:80px;
+	background:url(../image/logo1.png) no-repeat;
+	position:relative;
+	left:160px;
+}
+#container{
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-230px;
+	margin-top:-100px;
+}
+#keyword{
+	border:1px solid #aaa;
+	width:450px;
+	height:30px;
+}
+#sub{
+	height:30px;
+	border:1px solid #aaa;
+}

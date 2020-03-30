@@ -1,0 +1,142 @@
+/*<!DOCTYPE html>*/
+/*<html lang="zh-CN">*/
+
+/*<head>*/
+	/*<title >民文舆情汇聚与监测系统 — 登录</title>*/
+	/*<link rel="shortcut icon" href="favicon.png"/>*/
+    /*<meta charset="utf-8">*/
+	/*<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">*/
+	/*<meta name="viewport" content="width=device-width, initial-scale=1">*/
+
+    /*<link rel="stylesheet" href="css/bootstrap.min.css">*/
+    /*<link rel="stylesheet" href="css/sb-admin.css">*/
+	/*<link rel="stylesheet" href="css/model.css">*/
+	/**/
+	/*<script src="js/vendor/jquery-1.9.0.min.js"></script>*/
+    /*<script src="js/vendor/jquery-ui-1.9.2.custom.min.js"></script>*/
+	/*<script src="js/vendor/json2.js"></script>*/
+	/*<script src="js/vendor/bootstrap.min.js"></script>*/
+	/*<script src="js/vendor/jquery-ui.js"></script>*/
+	/*<!--<script src="js/common.js"></script>-->*/
+	/*<!--<script src="js/main.js"></script>-->*/
+	/*<!-- */
+	/*<script src="js/cookie.js"></script>*/
+	/*<script src="js/login.js"></script>*/
+	 /*-->*/
+/*</head>*/
+
+/*<script>*/
+	/*function Submit(){*/
+		/*var userModel = {};*/
+		/*var username = $("#userName").val();*/
+		/*var password = $("#password").val();*/
+		/**/
+		/*userModel.userName = username;*/
+		/*userModel.password = password;*/
+		/**/
+		/*if(username == ""){*/
+			/*alert("请输入用户名");*/
+			/*return false;*/
+		/*}else{*/
+			/*if(password == ""){*/
+				/*alert("密码不能为空");*/
+				/*return false;*/
+			/*}else{*/
+				/*document.getElementById("ajaxform").action = "svc/user/mwhjlogin/userLogin";*/
+				/*document.getElementById("ajaxform").submit();*/
+			/*}*/
+		/*}*/
+		/**/
+		/*//callback handler for form submit*/
+		/*!*$("#ajaxform").submit(function(e){*/
+		    /*var postData = $(this).serializeArray();*/
+		    /*var formURL = $(this).attr("action");*/
+		    /*$.ajax({*/
+		        /*url : formURL,*/
+		        /*type: "POST",*/
+		        /*data : postData,*/
+		        /*//dataType: 'jsonp',*/
+		        /*crossDomain : true,*/
+		        /*success:function(data, textStatus, jqXHR){*/
+		            /*if(data.id == 1){*/
+		            	/*window.location.href = 'index.html';*/
+		            /*}*/
+		            /*else {*/
+		            	/*alert(data.desc);*/
+		            	/*return false;*/
+		            /*}*/
+		        /*}*/
+		    /*});*/
+		 /*e.preventDefault(); //STOP default action*/
+		 /*e.unbind(); //unbind. to stop multiple form submit.*/
+		/*});*!*/
+		/**/
+	/*}*/
+/*</script>*/
+
+/*<body>*/
+
+    /*<div class="container">*/
+        /*<div class="row">*/
+            /*<div class="col-md-4 col-md-offset-4">*/
+                /*<div class="login-panel panel panel-default">*/
+                    /*<div class="panel-heading" style="text-align:center;">*/
+                        /*<h3 class="panel-title">登录</h3>*/
+                    /*</div>*/
+					/*<div class="panel-body">*/
+						/*<!--<form name="ajaxform" id="ajaxform" action="svc/user/mwhjlogin/userLogin" method="POST">-->*/
+						/*<form name="ajaxform" id="ajaxform" action="" method="POST">*/
+                            /*<fieldset>*/
+                                /*<div class="form-group">*/
+                                    /*<span style="font-size: 14px;">用户名：</span><input id="userName" class="form-control" name="userName" type="text"></input>*/
+                                /*</div>*/
+                                /*<div class="form-group">*/
+                                    	/*<span style="font-size: 14px;">密码：</span><input id="password" class="form-control" name="password" type="password"*/
+										/*onkeydown='if(event.keyCode==13){$(".btn-login").click();}'> </input>*/
+                                /*</div>*/
+                                 /*<!--<button id="login" class="btn btn-lg btn-success btn-block btn-login" onclick="javascript: Submit()">登录</button>-->*/
+                            /*</fieldset>*/
+                        /*</form>*/
+                    /*</div>*/
+					/*<div class="panel-footer" style="padding:0;">*/
+						/*<button id="login" class="btn btn-lg btn-success btn-block btn-login" onclick="javascript: Submit()" style="border-radius:0;">登录</button>*/
+					/*</div>*/
+                    	/*<!-- */
+                        /*<form role="form" name="form1" action="svc/user/mwhjlogin/userLogin" method="post">*/
+                            /*<fieldset>*/
+                                /*<div class="form-group">*/
+                                    /*<input id="userName" class="form-control" name="userName" type="text">*/
+                                /*</div>*/
+                                /*<div class="form-group">*/
+                                    /*<input id="password" class="form-control" name="password" type="password"*/
+										/*onkeydown='if(event.keyCode==13){$(".btn-login").click();}'>*/
+                                /*</div>*/
+								/*<!-- */
+                                /*<div class="checkbox">*/
+                                    /*<label style="vertical-align: middle;">*/
+                                        /*<input id="remenberMe" name="remember" type="checkbox" value="">记住我*/
+                                    /*</label>*/
+                                /*</div>*/
+                                 /*-->*/
+                                /*<!-- Change this to a button or input when using this as a form -->*/
+                                /*<!--<a id="login" class="btn btn-lg btn-success btn-block btn-login" onclick="javascript: loginUser();">登录</a>-->*/
+                                /*<!-- */
+                                /*<a id="login" class="btn btn-lg btn-success btn-block btn-login">登录</a>*/
+                                 /*-->*/
+                                 /*<!-- */
+                                 /*<button onclick="javascript: Submit()">登录</button>*/
+                                 /*-->*/
+                                  /*<!-- */
+                                  /*<button type="Submit" >登录</button>*/
+                                   /*-->*/
+                                   /*<!-- */
+                            /*</fieldset>*/
+                        /*</form>*/
+                        /*-->*/
+                    /*</div>*/
+                /*</div>*/
+            /*</div>*/
+        /*</div>*/
+/*</body>*/
+
+/*</html>*/

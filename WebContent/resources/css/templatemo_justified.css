@@ -1,0 +1,313 @@
+body {
+width: 100%;
+
+}
+.statistic{
+	min-width:2500px
+	
+} 
+.topic{
+	min-width:100%;
+	
+}
+.bottomRealContent{ width: 2100px; border: 1px solid #e3e3e3; border-radius: 4px;}
+.bottomContentBox{width:100px; margin-left:5%; height: 470px; float:left;}
+/*2016骞�7鏈�4鏃�*/
+.show-line-3{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	
+   
+	}
+
+.huati{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+
+.bd{border:1px solid #cdcdcd;}
+.new-des{
+border:1px solid #cdcdcd;
+border-bottom:none;
+margin-bottom:5px;
+margin-top: 5px;
+
+}
+
+.panel-default{
+border-color:#ddd;
+}
+.panel{
+
+margin-bottom:5px;
+background-color:#fff;
+border:1px solid transparent;
+border-radius:4px;
+box-shadow:1px 1px 1px rgba(0,0,0,05);
+
+}
+.panel-default > .panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+   
+}
+.panel-body{
+	margin: 5px;
+	color:#333;
+	height: 230px;
+	width: 100%;
+	
+}
+.panel-body1{
+	margin: 5px;
+	color:#333;
+	height: 280px
+	
+}
+.huatixia{
+	 width: 85%;
+    height:275px;
+  overflow: hidden;
+text-overflow: ellipsis;
+margin-bottom:2px;
+	
+}
+.newslist{	
+	/* border-right: 1px dotted #333333; width:9.5%; */
+}
+.newslist p{
+height:275px; word-wrap: break-word; /* border-right: 1px dotted #333333; */
+}
+.zhaiyao{
+	width:9.5%; height:275px; overflow: hidden; text-overflow:ellipsis;white-space: nowrap;
+	border-right: 1px dotted #333333;line-height: 50px;
+}
+.wenzhang{
+	width: 60%; 
+	height:450px; 
+	margin-top: 5px; 
+	background-color: #CDCDCD;
+	border:1px solid transparent;
+border-radius:4px;
+box-shadow:1px 1px 1px rgba(0,0,0,05);
+
+}
+.fa-link:before {
+  content: "\f0c1";
+}
+.well {
+ /*  min-height: 20px; */
+  height:90%;;
+  width:55px;
+  word-wrap:break-word;
+/*   overflow: hidden;white-space: nowrap;text-overflow: ellipsis; */
+  padding: 19px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+          margin-left: 3px;
+}
+/*2016骞�7鏈�5鏃�*/
+
+a:hover { color: #090; }
+.space29{margin-top: 20px; height:602px; width: 100%;}
+.space30 { margin-top: 20px; height:500px; width: 100%; overflow-x:scroll; overflow-y:hidden;}
+.space31 { margin-top: 20px; height:700px; width: 29%; border: 1px solid #e3e3e3; border-radius: 4px; background-color: #FFFFFF;}
+.row ul { padding-left: 30px; }
+.clear { clear: both; }
+.float_left { float: left; }
+.float_right { float: right; }
+
+.img_left_gallery {	float: left; margin: 12px; padding: 8px; border: 1px solid #CCC; }
+
+.img_left {	float: left; margin-right: 20px; margin-bottom: 15px; }
+
+.img_right { float: right; margin: 0px 0px 15px 20px; }
+
+.img_bottom { margin-bottom: 15px; }
+
+.footer {
+  /*border-top: 1px solid #eee;
+  margin-top: 20px;
+  padding-top: 20px;
+  margin-bottom: 0px;*/
+  text-align: center;
+    background-color: #f8f8f8;
+    color: #000;
+    bottom: 0;
+    height: 40px;
+    line-height: 40px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    border-top: 1px solid #e7e7e7;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    box-shadow: 0 0 10px #e7e7e7;
+    -webkit-box-shadow: 0 0 10px #e7e7e7;
+    -moz-box-shadow: 0 0 10px #e7e7e7;
+    
+  
+}
+.copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  height: 0px;
+}
+/* Customize the nav-justified links to be fill the entire space of the .navbar */
+
+.nav-justified {
+  background-color: #006699;
+  width:100%;
+  border: 1px solid #006699;
+
+
+
+}
+.nav-justified li{
+	width: auto;
+	 position:relative;
+    z-index:100;
+	
+}
+
+.nav-justified > li > a{
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #005588;
+  background-color: #006699; /* Old browsers */
+  background-repeat: repeat-x; /* Repeat the gradient */
+  background-image: -moz-linear-gradient(top, #0099FF 0%, #006699 100%); /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0099FF), color-stop(100%,#006699)); /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(top, #0099FF 0%,#006699 100%); /* Chrome 10+,Safari 5.1+ */
+  background-image: -ms-linear-gradient(top, #0099FF 0%,#006699 100%); /* IE10+ */
+  background-image: -o-linear-gradient(top, #0099FF 0%,#006699 100%); /* Opera 11.10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0099FF', endColorstr='#006699',GradientType=0 ); /* IE6-9 */
+  background-image: linear-gradient(top, #0099FF 0%,#006699 100%); /* W3C */
+  border-bottom: 0;
+  
+}
+
+.nav-justified > .active > a,
+.nav-justified > .active > a:hover,
+.nav-justified > .active > a:focus {
+  color: #000000;
+  background-color: #22BBFF;
+  background-image: none;
+  box-shadow: inset 0 3px 7px rgba(0,0,0,.25);
+}
+
+.nav-justified > li > a:hover { 
+	color: black;
+	background-color: #22BBFF; 
+	background-image: none;
+	box-shadow: inset 0 3px 7px rgba(0,0,0,.25);
+}
+
+.nav-justified > li:first-child > a {
+  border-radius: 5px 5px 0 0;
+  border-bottom: 0;
+}
+.nav-justified > li:last-child > a {
+  border-bottom: 0;
+}
+
+@media (min-width: 100%) {
+  .nav-justified {
+    max-height: 102px;
+    width:100%;
+  }
+  .nav-justified > li > a {
+    border-left: 1px solid #0099FF;
+    border-right: 1px solid #005588;
+
+  }
+  .nav-justified > li:first-child > a {
+    border-left: 0;
+    border-radius: 0px 0 0 0px;
+  }
+  .nav-justified > li:last-child > a {
+    border-radius: 0 0px 0px 0;
+   
+  }
+}
+/*2015骞�7鏈�8鏃�*/
+
+/*2015骞�7鏈�9鏃�*/
+.news{
+	height:502px;
+	width: 4%;
+	
+	
+}
+.page-header{
+ text-align:center;
+font-size:22px ;
+font-weight:bold;
+padding-right:9px;
+border-right:1px solid #CDCDCD;
+}
+/*2015骞�7鏈�10鏃�*/
+
+
+
+/*2015骞�7鏈�10鏃�*/
+.main-news-title{
+	padding:5px 0;
+}
+#mainnew_title{
+	font-size:16px;
+	font-weight:bold;
+	line-height:36px;
+}
+
+.font_news {
+    #color: rgb(11, 98, 164);
+    color: rgb(31, 119, 180);
+    font-size: 15px;
+    margin: 0 2px;
+    vertical-align: bottom;
+}
+.font_loc {
+    color: rgb(44, 160, 44);
+}
+.font_per {
+    color: rgb(23, 190, 207);
+}
+.font_org {
+    color: rgb(255, 127, 14);
+}
+.font_loc, .font_per, .font_org {
+    font-size: 15px;
+    margin: 0 2px;
+    vertical-align: bottom;
+}
+a:hover, a:focus {
+    color: #2a6496;
+    text-decoration: underline;
+}
+a:active, a:hover {
+    outline: 0;
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 100%) {
+  /* Remove the padding we set earlier */
+  .masthead,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

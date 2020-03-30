@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+/* 打印样式 */
+@media print{
+	h4{
+		font-size:14px !important;
+	}
+	.col-sm-8{
+		width:auto !important;
+	}
+	.col-sm-4{
+		width:auto !important;
+	}
+	#panel_show_news{
+		display:none !important;
+	}
+	.panel-fixed, .panel-fixed-2{
+		/* margin-right: 30px; */
+		width:auto !important;
+		overflow-y: auto !important;
+		right:auto !important;
+		top:auto !important;
+		left: auto !important;
+		position: static !important;
+		margin-right: auto !important;
+		margin-left: auto !important;
+		bottom: auto !important;
+	}
+	li {
+		page-break-inside: avoid;
+	}
+	.timeline:before {
+		content: " ";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		width: 3px;
+		margin-left: -1.5px;
+		border: 2px solid #eeeeee;
+	}
+	.glyphicon-credit-card{
+		color:#FFF !important;
+	}
+	.glyphicon-ok{
+		color:#666 !important;
+	}
+	.font-total {
+		color: #068B06 !important;
+	}
+	.lang{
+		color:#B61818 !important;
+	}
+	.timeline > li > .timeline-badge {
+		z-index: 100;
+		position: absolute;
+		top: 16px;
+		left: 50%;
+		width: 40px;
+		height: 40px;
+		margin-left: -20px;
+		border-radius: 50% 50% 50% 50%;
+		text-align: center;
+		font-size: 1.4em;
+		line-height: 40px;
+		color: #fff;
+	}
+}
+
+.timeline-content{
+	overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.tl-title{
+	cursor:pointer;
+}
+.tl-title:hover{
+	color:#428bca;
+}
+#news_content span{
+	line-height:22px;
+}
+.alert-info{
+	padding:10px 15px !important;
+}
+.font-total{
+	color:#068B06;
+	margin:0 3px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.lang{
+	color:#B61818;
+	margin:0 3px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.panel-fixed, .panel-fixed-2{
+	position: fixed;
+	right: 30px;
+	top: 140px;
+	left: 66.66666667%;
+	/* margin-right: 30px; */
+	margin-left: 105px;
+	bottom: 40px;
+	overflow-y: auto;
+}
+.panel-fixed-2{
+	top:70px !important;
+}
+.showMore{
+	width: 100%;
+	text-align: center;
+	display:block;
+}
+.showMore-a{
+	cursor:pointer;
+}
+/* checkbox-inline */
+.checkbox-inline{
+	vertical-align: super !important;
+}
+.crawl_Source{
+	margin-left:15px;
+}
